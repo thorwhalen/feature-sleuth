@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "name": "Animals Dataset",
+    "version": "1.0.0",
+    "description": "Collection of animals for educational game"
+  },
+  "identification_fields": ["name"],
+  "feature_fields": [
+    {
+      "name": "habitat",
+      "display_name": "Habitat",
+      "type": "categorical"
+    },
+    {
+      "name": "weight_kg",
+      "display_name": "Weight",
+      "type": "numerical",
+      "bucketing": {
+        "method": "custom",
+        "buckets": [
+          {"label": "0-10kg", "min": 0, "max": 10},
+          {"label": "10-100kg", "min": 10, "max": 100},
+          {"label": "100kg+", "min": 100, "max": null}
+        ]
+      }
+    },
+    {
+      "name": "diet",
+      "display_name": "Diet",
+      "type": "categorical"
+    },
+    {
+      "name": "body_covering",
+      "display_name": "Body Covering",
+      "type": "categorical"
+    },
+    {
+      "name": "can_fly",
+      "display_name": "Can Fly",
+      "type": "boolean"
+    }
+  ],
+  "items": [
+    {
+      "name": "Lion",
+      "habitat": "Savanna",
+      "weight_kg": 190,
+      "diet": "Carnivore",
+      "body_covering": "Fur",
+      "can_fly": false
+    },
+    {
+      "name": "Penguin",
+      "habitat": "Antarctic",
+      "weight_kg": 25,
+      "diet": "Carnivore",
+      "body_covering": "Feathers",
+      "can_fly": false
+    },
+    {
+      "name": "Eagle",
+      "habitat": "Mountains",
+      "weight_kg": 6,
+      "diet": "Carnivore",
+      "body_covering": "Feathers",
+      "can_fly": true
+    },
+    {
+      "name": "Elephant",
+      "habitat": "Savanna",
+      "weight_kg": 5000,
+      "diet": "Herbivore",
+      "body_covering": "Skin",
+      "can_fly": false
+    },
+    {
+      "name": "Rabbit",
+      "habitat": "Forest",
+      "weight_kg": 2,
+      "diet": "Herbivore",
+      "body_covering": "Fur",
+      "can_fly": false
+    },
+    {
+      "name": "Shark",
+      "habitat": "Ocean",
+      "weight_kg": 800,
+      "diet": "Carnivore",
+      "body_covering": "Scales",
+      "can_fly": false
+    },
+    {
+      "name": "Parrot",
+      "habitat": "Rainforest",
+      "weight_kg": 1,
+      "diet": "Omnivore",
+      "body_covering": "Feathers",
+      "can_fly": true
+    },
+    {
+      "name": "Giraffe",
+      "habitat": "Savanna",
+      "weight_kg": 1200,
+      "diet": "Herbivore",
+      "body_covering": "Skin",
+      "can_fly": false
+    },
+    {
+      "name": "Frog",
+      "habitat": "Wetland",
+      "weight_kg": 0.5,
+      "diet": "Carnivore",
+      "body_covering": "Skin",
+      "can_fly": false
+    },
+    {
+      "name": "Bat",
+      "habitat": "Cave",
+      "weight_kg": 0.3,
+      "diet": "Omnivore",
+      "body_covering": "Fur",
+      "can_fly": true
+    },
+    {
+      "name": "Dolphin",
+      "habitat": "Ocean",
+      "weight_kg": 200,
+      "diet": "Carnivore",
+      "body_covering": "Skin",
+      "can_fly": false
+    },
+    {
+      "name": "Bear",
+      "habitat": "Forest",
+      "weight_kg": 300,
+      "diet": "Omnivore",
+      "body_covering": "Fur",
+      "can_fly": false
+    }
+  ],
+  "preprocessing": {
+    "feature_selection_entropy_threshold": 0.3,
+    "weight_calculation_method": "proportional"
+  }
+}

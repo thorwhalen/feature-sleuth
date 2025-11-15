@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "game_name": "Animal Detective - Beginner",
+    "difficulty": "easy",
+    "target_age_range": "8-12"
+  },
+  "game_mode": {
+    "type": "calculated_guess",
+    "allow_early_guess": true,
+    "require_single_item": false
+  },
+  "feature_selection": {
+    "method": "user_choice",
+    "auto_selection_algorithm": "entropy_based",
+    "available_features": ["habitat", "weight_kg", "diet", "body_covering", "can_fly"]
+  },
+  "random_selector": {
+    "type": "spinning_wheel",
+    "animation_duration_ms": 2000,
+    "options": {
+      "show_probabilities": true,
+      "allow_respin": false
+    }
+  },
+  "scoring_system": {
+    "base_points_correct_guess": 100,
+    "calculation_method": "inverse_set_size",
+    "bonus_points": {
+      "high_information_gain": 20,
+      "efficient_turns": 10
+    },
+    "penalties": {
+      "false_positive_guess": -10,
+      "excessive_turns_threshold": 8,
+      "penalty_per_extra_turn": -5
+    }
+  },
+  "turn_mechanics": {
+    "max_turns": 10,
+    "show_remaining_items_count": true,
+    "show_remaining_items_list": true,
+    "hint_system": {
+      "enabled": true,
+      "hints_per_game": 2
+    }
+  },
+  "ui_preferences": {
+    "theme": "educational_bright",
+    "show_progress_bar": true,
+    "show_feature_history": true,
+    "animations_enabled": true
+  },
+  "educational_mode": {
+    "show_information_gain": true,
+    "explain_entropy": false,
+    "post_game_analysis": true
+  }
+}

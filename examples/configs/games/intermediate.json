@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "game_name": "Animal Detective - Intermediate",
+    "difficulty": "medium",
+    "target_age_range": "10-14"
+  },
+  "game_mode": {
+    "type": "pure_deduction",
+    "allow_early_guess": false,
+    "require_single_item": true
+  },
+  "feature_selection": {
+    "method": "user_choice",
+    "auto_selection_algorithm": "entropy_based",
+    "available_features": ["habitat", "weight_kg", "diet", "body_covering", "can_fly"]
+  },
+  "random_selector": {
+    "type": "spinning_wheel",
+    "animation_duration_ms": 1500,
+    "options": {
+      "show_probabilities": false,
+      "allow_respin": false
+    }
+  },
+  "scoring_system": {
+    "base_points_correct_guess": 200,
+    "calculation_method": "fixed",
+    "bonus_points": {
+      "high_information_gain": 30,
+      "efficient_turns": 20
+    },
+    "penalties": {
+      "excessive_turns_threshold": 6,
+      "penalty_per_extra_turn": -10
+    }
+  },
+  "turn_mechanics": {
+    "max_turns": 12,
+    "show_remaining_items_count": true,
+    "show_remaining_items_list": false,
+    "hint_system": {
+      "enabled": true,
+      "hints_per_game": 1
+    }
+  },
+  "ui_preferences": {
+    "theme": "educational_bright",
+    "show_progress_bar": true,
+    "show_feature_history": true,
+    "animations_enabled": true
+  },
+  "educational_mode": {
+    "show_information_gain": true,
+    "explain_entropy": true,
+    "post_game_analysis": true
+  }
+}
