@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "name": "Musical Instruments Dataset",
+    "version": "1.0.0",
+    "description": "25 musical instruments with classification and characteristics"
+  },
+  "identification_fields": ["name"],
+  "feature_fields": [
+    {
+      "name": "instrument_family",
+      "display_name": "Instrument Family",
+      "type": "categorical"
+    },
+    {
+      "name": "primary_material",
+      "display_name": "Primary Material",
+      "type": "categorical"
+    },
+    {
+      "name": "geographic_origin",
+      "display_name": "Geographic Origin",
+      "type": "categorical"
+    },
+    {
+      "name": "pitch_range",
+      "display_name": "Pitch Range",
+      "type": "categorical"
+    },
+    {
+      "name": "playing_method",
+      "display_name": "Playing Method",
+      "type": "categorical"
+    },
+    {
+      "name": "typical_size",
+      "display_name": "Typical Size",
+      "type": "categorical"
+    },
+    {
+      "name": "used_in_orchestra",
+      "display_name": "Used in Orchestra",
+      "type": "boolean"
+    },
+    {
+      "name": "requires_electricity",
+      "display_name": "Requires Electricity",
+      "type": "boolean"
+    }
+  ],
+  "items": [
+    {"name": "Piano", "instrument_family": "Keyboard", "primary_material": "Wood", "geographic_origin": "Europe", "pitch_range": "Full Range", "playing_method": "Struck", "typical_size": "Large", "used_in_orchestra": false, "requires_electricity": false},
+    {"name": "Violin", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Europe", "pitch_range": "High", "playing_method": "Bowed", "typical_size": "Small", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Cello", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Europe", "pitch_range": "Low-Mid", "playing_method": "Bowed", "typical_size": "Large", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Flute", "instrument_family": "Woodwind", "primary_material": "Metal", "geographic_origin": "Global", "pitch_range": "High", "playing_method": "Blown", "typical_size": "Small", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Clarinet", "instrument_family": "Woodwind", "primary_material": "Wood", "geographic_origin": "Europe", "pitch_range": "Mid", "playing_method": "Blown", "typical_size": "Small", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Saxophone", "instrument_family": "Woodwind", "primary_material": "Brass", "geographic_origin": "Europe", "pitch_range": "Mid", "playing_method": "Blown", "typical_size": "Medium", "used_in_orchestra": false, "requires_electricity": false},
+    {"name": "Trumpet", "instrument_family": "Brass", "primary_material": "Brass", "geographic_origin": "Global", "pitch_range": "High", "playing_method": "Blown", "typical_size": "Small", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Trombone", "instrument_family": "Brass", "primary_material": "Brass", "geographic_origin": "Europe", "pitch_range": "Low-Mid", "playing_method": "Blown", "typical_size": "Large", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "French Horn", "instrument_family": "Brass", "primary_material": "Brass", "geographic_origin": "Europe", "pitch_range": "Mid", "playing_method": "Blown", "typical_size": "Medium", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Tuba", "instrument_family": "Brass", "primary_material": "Brass", "geographic_origin": "Europe", "pitch_range": "Low", "playing_method": "Blown", "typical_size": "Large", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Acoustic Guitar", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Europe", "pitch_range": "Mid", "playing_method": "Plucked", "typical_size": "Medium", "used_in_orchestra": false, "requires_electricity": false},
+    {"name": "Electric Guitar", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Americas", "pitch_range": "Mid", "playing_method": "Plucked", "typical_size": "Medium", "used_in_orchestra": false, "requires_electricity": true},
+    {"name": "Bass Guitar", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Americas", "pitch_range": "Low", "playing_method": "Plucked", "typical_size": "Large", "used_in_orchestra": false, "requires_electricity": true},
+    {"name": "Harp", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Global", "pitch_range": "Full Range", "playing_method": "Plucked", "typical_size": "Large", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Drums", "instrument_family": "Percussion", "primary_material": "Synthetic", "geographic_origin": "Global", "pitch_range": "Non-Pitched", "playing_method": "Struck", "typical_size": "Large", "used_in_orchestra": false, "requires_electricity": false},
+    {"name": "Timpani", "instrument_family": "Percussion", "primary_material": "Metal", "geographic_origin": "Europe", "pitch_range": "Low", "playing_method": "Struck", "typical_size": "Large", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Xylophone", "instrument_family": "Percussion", "primary_material": "Wood", "geographic_origin": "Africa", "pitch_range": "High", "playing_method": "Struck", "typical_size": "Medium", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Marimba", "instrument_family": "Percussion", "primary_material": "Wood", "geographic_origin": "Africa", "pitch_range": "Low-Mid", "playing_method": "Struck", "typical_size": "Large", "used_in_orchestra": true, "requires_electricity": false},
+    {"name": "Accordion", "instrument_family": "Keyboard", "primary_material": "Wood", "geographic_origin": "Europe", "pitch_range": "Full Range", "playing_method": "Bellows", "typical_size": "Medium", "used_in_orchestra": false, "requires_electricity": false},
+    {"name": "Organ", "instrument_family": "Keyboard", "primary_material": "Wood", "geographic_origin": "Europe", "pitch_range": "Full Range", "playing_method": "Blown", "typical_size": "Large", "used_in_orchestra": false, "requires_electricity": true},
+    {"name": "Synthesizer", "instrument_family": "Electronic", "primary_material": "Plastic", "geographic_origin": "Americas", "pitch_range": "Full Range", "playing_method": "Electronic", "typical_size": "Medium", "used_in_orchestra": false, "requires_electricity": true},
+    {"name": "Sitar", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Asia", "pitch_range": "Mid", "playing_method": "Plucked", "typical_size": "Large", "used_in_orchestra": false, "requires_electricity": false},
+    {"name": "Bagpipes", "instrument_family": "Woodwind", "primary_material": "Wood", "geographic_origin": "Europe", "pitch_range": "Mid", "playing_method": "Blown", "typical_size": "Medium", "used_in_orchestra": false, "requires_electricity": false},
+    {"name": "Banjo", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Africa", "pitch_range": "High", "playing_method": "Plucked", "typical_size": "Medium", "used_in_orchestra": false, "requires_electricity": false},
+    {"name": "Ukulele", "instrument_family": "Strings", "primary_material": "Wood", "geographic_origin": "Oceania", "pitch_range": "High", "playing_method": "Plucked", "typical_size": "Small", "used_in_orchestra": false, "requires_electricity": false}
+  ],
+  "preprocessing": {
+    "feature_selection_entropy_threshold": 0.3,
+    "weight_calculation_method": "proportional"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "name": "Programming Languages Dataset",
+    "version": "1.0.0",
+    "description": "Popular programming languages with their characteristics"
+  },
+  "identification_fields": ["name"],
+  "feature_fields": [
+    {
+      "name": "primary_paradigm",
+      "display_name": "Primary Paradigm",
+      "type": "categorical"
+    },
+    {
+      "name": "typing_system",
+      "display_name": "Typing System",
+      "type": "categorical"
+    },
+    {
+      "name": "primary_use_case",
+      "display_name": "Primary Use Case",
+      "type": "categorical"
+    },
+    {
+      "name": "year_created",
+      "display_name": "Year Created",
+      "type": "numerical",
+      "bucketing": {
+        "method": "custom",
+        "buckets": [
+          {"label": "Vintage (1950-1980)", "min": 1950, "max": 1980},
+          {"label": "Classic (1980-1995)", "min": 1980, "max": 1995},
+          {"label": "Modern (1995-2010)", "min": 1995, "max": 2010},
+          {"label": "Contemporary (2010+)", "min": 2010, "max": null}
+        ]
+      }
+    },
+    {
+      "name": "compiled_or_interpreted",
+      "display_name": "Execution Model",
+      "type": "categorical"
+    },
+    {
+      "name": "has_garbage_collection",
+      "display_name": "Has Garbage Collection",
+      "type": "boolean"
+    },
+    {
+      "name": "is_object_oriented",
+      "display_name": "Supports OOP",
+      "type": "boolean"
+    },
+    {
+      "name": "syntax_style",
+      "display_name": "Syntax Style",
+      "type": "categorical"
+    }
+  ],
+  "items": [
+    {"name": "Python", "primary_paradigm": "Multi-Paradigm", "typing_system": "Dynamic", "primary_use_case": "Data Science", "year_created": 1991, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "Indentation-based"},
+    {"name": "JavaScript", "primary_paradigm": "Multi-Paradigm", "typing_system": "Dynamic", "primary_use_case": "Web Development", "year_created": 1995, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "Java", "primary_paradigm": "Object-Oriented", "typing_system": "Static", "primary_use_case": "Enterprise", "year_created": 1995, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "C", "primary_paradigm": "Procedural", "typing_system": "Static", "primary_use_case": "Systems Programming", "year_created": 1972, "compiled_or_interpreted": "Compiled", "has_garbage_collection": false, "is_object_oriented": false, "syntax_style": "C-like"},
+    {"name": "C++", "primary_paradigm": "Multi-Paradigm", "typing_system": "Static", "primary_use_case": "Systems Programming", "year_created": 1985, "compiled_or_interpreted": "Compiled", "has_garbage_collection": false, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "C#", "primary_paradigm": "Multi-Paradigm", "typing_system": "Static", "primary_use_case": "Enterprise", "year_created": 2000, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "Ruby", "primary_paradigm": "Object-Oriented", "typing_system": "Dynamic", "primary_use_case": "Web Development", "year_created": 1995, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "Indentation-friendly"},
+    {"name": "PHP", "primary_paradigm": "Procedural", "typing_system": "Dynamic", "primary_use_case": "Web Development", "year_created": 1995, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "Swift", "primary_paradigm": "Multi-Paradigm", "typing_system": "Static", "primary_use_case": "Mobile Development", "year_created": 2014, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "Modern"},
+    {"name": "Kotlin", "primary_paradigm": "Multi-Paradigm", "typing_system": "Static", "primary_use_case": "Mobile Development", "year_created": 2011, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "Modern"},
+    {"name": "Go", "primary_paradigm": "Procedural", "typing_system": "Static", "primary_use_case": "Backend Development", "year_created": 2009, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": false, "syntax_style": "C-like"},
+    {"name": "Rust", "primary_paradigm": "Multi-Paradigm", "typing_system": "Static", "primary_use_case": "Systems Programming", "year_created": 2010, "compiled_or_interpreted": "Compiled", "has_garbage_collection": false, "is_object_oriented": false, "syntax_style": "Modern"},
+    {"name": "TypeScript", "primary_paradigm": "Multi-Paradigm", "typing_system": "Static", "primary_use_case": "Web Development", "year_created": 2012, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "Scala", "primary_paradigm": "Multi-Paradigm", "typing_system": "Static", "primary_use_case": "Data Science", "year_created": 2004, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "Modern"},
+    {"name": "R", "primary_paradigm": "Functional", "typing_system": "Dynamic", "primary_use_case": "Data Science", "year_created": 1993, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": false, "syntax_style": "Unique"},
+    {"name": "MATLAB", "primary_paradigm": "Procedural", "typing_system": "Dynamic", "primary_use_case": "Scientific Computing", "year_created": 1984, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "Unique"},
+    {"name": "Haskell", "primary_paradigm": "Functional", "typing_system": "Static", "primary_use_case": "Academic", "year_created": 1990, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": false, "syntax_style": "Unique"},
+    {"name": "Lisp", "primary_paradigm": "Functional", "typing_system": "Dynamic", "primary_use_case": "Academic", "year_created": 1958, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": false, "syntax_style": "Unique"},
+    {"name": "Perl", "primary_paradigm": "Multi-Paradigm", "typing_system": "Dynamic", "primary_use_case": "Scripting", "year_created": 1987, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "Fortran", "primary_paradigm": "Procedural", "typing_system": "Static", "primary_use_case": "Scientific Computing", "year_created": 1957, "compiled_or_interpreted": "Compiled", "has_garbage_collection": false, "is_object_oriented": false, "syntax_style": "Unique"},
+    {"name": "COBOL", "primary_paradigm": "Procedural", "typing_system": "Static", "primary_use_case": "Enterprise", "year_created": 1959, "compiled_or_interpreted": "Compiled", "has_garbage_collection": false, "is_object_oriented": false, "syntax_style": "Unique"},
+    {"name": "SQL", "primary_paradigm": "Declarative", "typing_system": "Static", "primary_use_case": "Database", "year_created": 1974, "compiled_or_interpreted": "Interpreted", "has_garbage_collection": true, "is_object_oriented": false, "syntax_style": "Unique"},
+    {"name": "Objective-C", "primary_paradigm": "Object-Oriented", "typing_system": "Static", "primary_use_case": "Mobile Development", "year_created": 1984, "compiled_or_interpreted": "Compiled", "has_garbage_collection": false, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "Dart", "primary_paradigm": "Object-Oriented", "typing_system": "Static", "primary_use_case": "Mobile Development", "year_created": 2011, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": true, "syntax_style": "C-like"},
+    {"name": "Elixir", "primary_paradigm": "Functional", "typing_system": "Dynamic", "primary_use_case": "Backend Development", "year_created": 2011, "compiled_or_interpreted": "Compiled", "has_garbage_collection": true, "is_object_oriented": false, "syntax_style": "Modern"}
+  ],
+  "preprocessing": {
+    "feature_selection_entropy_threshold": 0.3,
+    "weight_calculation_method": "proportional"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "name": "United States - 50 States Dataset",
+    "version": "1.0.0",
+    "description": "All 50 US states with geographic, demographic, and historical characteristics"
+  },
+  "identification_fields": ["name"],
+  "feature_fields": [
+    {
+      "name": "region",
+      "display_name": "Geographic Region",
+      "type": "categorical"
+    },
+    {
+      "name": "size_category",
+      "display_name": "Size Category",
+      "type": "categorical"
+    },
+    {
+      "name": "population_millions",
+      "display_name": "Population",
+      "type": "numerical",
+      "bucketing": {
+        "method": "custom",
+        "buckets": [
+          {"label": "Small (<3M)", "min": 0, "max": 3},
+          {"label": "Medium (3-7M)", "min": 3, "max": 7},
+          {"label": "Large (7-15M)", "min": 7, "max": 15},
+          {"label": "Very Large (15M+)", "min": 15, "max": null}
+        ]
+      }
+    },
+    {
+      "name": "has_ocean_coast",
+      "display_name": "Has Ocean Coastline",
+      "type": "boolean"
+    },
+    {
+      "name": "admission_era",
+      "display_name": "Statehood Era",
+      "type": "categorical"
+    },
+    {
+      "name": "capital_size",
+      "display_name": "Capital City Size",
+      "type": "categorical"
+    },
+    {
+      "name": "time_zone_count",
+      "display_name": "Number of Time Zones",
+      "type": "numerical",
+      "bucketing": {
+        "method": "custom",
+        "buckets": [
+          {"label": "One Zone", "min": 1, "max": 2},
+          {"label": "Multiple Zones", "min": 2, "max": null}
+        ]
+      }
+    },
+    {
+      "name": "has_mountains",
+      "display_name": "Has Major Mountains",
+      "type": "boolean"
+    }
+  ],
+  "items": [
+    {"name": "Alabama", "region": "South", "size_category": "Medium", "population_millions": 5.0, "has_ocean_coast": true, "admission_era": "Antebellum", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Alaska", "region": "West", "size_category": "Largest", "population_millions": 0.7, "has_ocean_coast": true, "admission_era": "Modern", "capital_size": "Small", "time_zone_count": 2, "has_mountains": true},
+    {"name": "Arizona", "region": "West", "size_category": "Large", "population_millions": 7.3, "has_ocean_coast": false, "admission_era": "20th Century", "capital_size": "Large", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Arkansas", "region": "South", "size_category": "Medium", "population_millions": 3.0, "has_ocean_coast": false, "admission_era": "Antebellum", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": true},
+    {"name": "California", "region": "West", "size_category": "Large", "population_millions": 39.5, "has_ocean_coast": true, "admission_era": "19th Century", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Colorado", "region": "West", "size_category": "Large", "population_millions": 5.8, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Large", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Connecticut", "region": "Northeast", "size_category": "Small", "population_millions": 3.6, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Delaware", "region": "Northeast", "size_category": "Small", "population_millions": 1.0, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Small", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Florida", "region": "South", "size_category": "Medium", "population_millions": 21.5, "has_ocean_coast": true, "admission_era": "Antebellum", "capital_size": "Medium", "time_zone_count": 2, "has_mountains": false},
+    {"name": "Georgia", "region": "South", "size_category": "Medium", "population_millions": 10.7, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Large", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Hawaii", "region": "West", "size_category": "Small", "population_millions": 1.4, "has_ocean_coast": true, "admission_era": "Modern", "capital_size": "Large", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Idaho", "region": "West", "size_category": "Large", "population_millions": 1.8, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Medium", "time_zone_count": 2, "has_mountains": true},
+    {"name": "Illinois", "region": "Midwest", "size_category": "Medium", "population_millions": 12.7, "has_ocean_coast": false, "admission_era": "Early Republic", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Indiana", "region": "Midwest", "size_category": "Medium", "population_millions": 6.8, "has_ocean_coast": false, "admission_era": "Early Republic", "capital_size": "Large", "time_zone_count": 2, "has_mountains": false},
+    {"name": "Iowa", "region": "Midwest", "size_category": "Medium", "population_millions": 3.2, "has_ocean_coast": false, "admission_era": "Antebellum", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Kansas", "region": "Midwest", "size_category": "Large", "population_millions": 2.9, "has_ocean_coast": false, "admission_era": "Antebellum", "capital_size": "Small", "time_zone_count": 2, "has_mountains": false},
+    {"name": "Kentucky", "region": "South", "size_category": "Medium", "population_millions": 4.5, "has_ocean_coast": false, "admission_era": "Early Republic", "capital_size": "Small", "time_zone_count": 2, "has_mountains": true},
+    {"name": "Louisiana", "region": "South", "size_category": "Medium", "population_millions": 4.7, "has_ocean_coast": true, "admission_era": "Early Republic", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Maine", "region": "Northeast", "size_category": "Medium", "population_millions": 1.4, "has_ocean_coast": true, "admission_era": "Early Republic", "capital_size": "Small", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Maryland", "region": "South", "size_category": "Small", "population_millions": 6.2, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Massachusetts", "region": "Northeast", "size_category": "Small", "population_millions": 7.0, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Large", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Michigan", "region": "Midwest", "size_category": "Medium", "population_millions": 10.0, "has_ocean_coast": false, "admission_era": "Antebellum", "capital_size": "Small", "time_zone_count": 2, "has_mountains": false},
+    {"name": "Minnesota", "region": "Midwest", "size_category": "Large", "population_millions": 5.7, "has_ocean_coast": false, "admission_era": "Antebellum", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Mississippi", "region": "South", "size_category": "Medium", "population_millions": 3.0, "has_ocean_coast": true, "admission_era": "Early Republic", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Missouri", "region": "Midwest", "size_category": "Large", "population_millions": 6.2, "has_ocean_coast": false, "admission_era": "Early Republic", "capital_size": "Small", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Montana", "region": "West", "size_category": "Large", "population_millions": 1.1, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Nebraska", "region": "Midwest", "size_category": "Large", "population_millions": 2.0, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Medium", "time_zone_count": 2, "has_mountains": false},
+    {"name": "Nevada", "region": "West", "size_category": "Large", "population_millions": 3.1, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Small", "time_zone_count": 2, "has_mountains": true},
+    {"name": "New Hampshire", "region": "Northeast", "size_category": "Small", "population_millions": 1.4, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "New Jersey", "region": "Northeast", "size_category": "Small", "population_millions": 9.3, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Small", "time_zone_count": 1, "has_mountains": false},
+    {"name": "New Mexico", "region": "West", "size_category": "Large", "population_millions": 2.1, "has_ocean_coast": false, "admission_era": "20th Century", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "New York", "region": "Northeast", "size_category": "Medium", "population_millions": 20.2, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "North Carolina", "region": "South", "size_category": "Medium", "population_millions": 10.4, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": true},
+    {"name": "North Dakota", "region": "Midwest", "size_category": "Large", "population_millions": 0.8, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Small", "time_zone_count": 2, "has_mountains": false},
+    {"name": "Ohio", "region": "Midwest", "size_category": "Medium", "population_millions": 11.8, "has_ocean_coast": false, "admission_era": "Early Republic", "capital_size": "Large", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Oklahoma", "region": "South", "size_category": "Large", "population_millions": 4.0, "has_ocean_coast": false, "admission_era": "20th Century", "capital_size": "Large", "time_zone_count": 2, "has_mountains": false},
+    {"name": "Oregon", "region": "West", "size_category": "Large", "population_millions": 4.2, "has_ocean_coast": true, "admission_era": "Antebellum", "capital_size": "Small", "time_zone_count": 2, "has_mountains": true},
+    {"name": "Pennsylvania", "region": "Northeast", "size_category": "Medium", "population_millions": 13.0, "has_ocean_coast": false, "admission_era": "Original 13", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Rhode Island", "region": "Northeast", "size_category": "Small", "population_millions": 1.1, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "South Carolina", "region": "South", "size_category": "Medium", "population_millions": 5.1, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "South Dakota", "region": "Midwest", "size_category": "Large", "population_millions": 0.9, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Small", "time_zone_count": 2, "has_mountains": true},
+    {"name": "Tennessee", "region": "South", "size_category": "Medium", "population_millions": 6.9, "has_ocean_coast": false, "admission_era": "Early Republic", "capital_size": "Large", "time_zone_count": 2, "has_mountains": true},
+    {"name": "Texas", "region": "South", "size_category": "Largest", "population_millions": 29.1, "has_ocean_coast": true, "admission_era": "Antebellum", "capital_size": "Large", "time_zone_count": 2, "has_mountains": false},
+    {"name": "Utah", "region": "West", "size_category": "Large", "population_millions": 3.3, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Vermont", "region": "Northeast", "size_category": "Small", "population_millions": 0.6, "has_ocean_coast": false, "admission_era": "Early Republic", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Virginia", "region": "South", "size_category": "Medium", "population_millions": 8.6, "has_ocean_coast": true, "admission_era": "Original 13", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Washington", "region": "West", "size_category": "Large", "population_millions": 7.7, "has_ocean_coast": true, "admission_era": "19th Century", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "West Virginia", "region": "South", "size_category": "Medium", "population_millions": 1.8, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true},
+    {"name": "Wisconsin", "region": "Midwest", "size_category": "Medium", "population_millions": 5.9, "has_ocean_coast": false, "admission_era": "Antebellum", "capital_size": "Medium", "time_zone_count": 1, "has_mountains": false},
+    {"name": "Wyoming", "region": "West", "size_category": "Large", "population_millions": 0.6, "has_ocean_coast": false, "admission_era": "19th Century", "capital_size": "Small", "time_zone_count": 1, "has_mountains": true}
+  ],
+  "preprocessing": {
+    "feature_selection_entropy_threshold": 0.3,
+    "weight_calculation_method": "proportional"
+  }
+}
