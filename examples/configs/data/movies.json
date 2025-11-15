@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "name": "Classic Movies Dataset",
+    "version": "1.0.0",
+    "description": "30 acclaimed movies with genre, era, and award characteristics"
+  },
+  "identification_fields": ["title"],
+  "feature_fields": [
+    {
+      "name": "primary_genre",
+      "display_name": "Primary Genre",
+      "type": "categorical"
+    },
+    {
+      "name": "era",
+      "display_name": "Era",
+      "type": "categorical"
+    },
+    {
+      "name": "runtime_minutes",
+      "display_name": "Runtime",
+      "type": "numerical",
+      "bucketing": {
+        "method": "custom",
+        "buckets": [
+          {"label": "Short (<100 min)", "min": 0, "max": 100},
+          {"label": "Standard (100-130 min)", "min": 100, "max": 130},
+          {"label": "Long (130-180 min)", "min": 130, "max": 180},
+          {"label": "Epic (180+ min)", "min": 180, "max": null}
+        ]
+      }
+    },
+    {
+      "name": "rating",
+      "display_name": "Age Rating",
+      "type": "categorical"
+    },
+    {
+      "name": "won_best_picture",
+      "display_name": "Won Best Picture Oscar",
+      "type": "boolean"
+    },
+    {
+      "name": "is_franchise",
+      "display_name": "Part of Franchise",
+      "type": "boolean"
+    },
+    {
+      "name": "setting",
+      "display_name": "Primary Setting",
+      "type": "categorical"
+    },
+    {
+      "name": "tone",
+      "display_name": "Overall Tone",
+      "type": "categorical"
+    }
+  ],
+  "items": [
+    {"title": "The Godfather", "primary_genre": "Crime", "era": "1970s", "runtime_minutes": 175, "rating": "R", "won_best_picture": true, "is_franchise": true, "setting": "Urban", "tone": "Serious"},
+    {"title": "The Shawshank Redemption", "primary_genre": "Drama", "era": "1990s", "runtime_minutes": 142, "rating": "R", "won_best_picture": false, "is_franchise": false, "setting": "Prison", "tone": "Uplifting"},
+    {"title": "Schindler's List", "primary_genre": "Drama", "era": "1990s", "runtime_minutes": 195, "rating": "R", "won_best_picture": true, "is_franchise": false, "setting": "Historical", "tone": "Serious"},
+    {"title": "Pulp Fiction", "primary_genre": "Crime", "era": "1990s", "runtime_minutes": 154, "rating": "R", "won_best_picture": false, "is_franchise": false, "setting": "Urban", "tone": "Dark Humor"},
+    {"title": "The Dark Knight", "primary_genre": "Action", "era": "2000s", "runtime_minutes": 152, "rating": "PG-13", "won_best_picture": false, "is_franchise": true, "setting": "Urban", "tone": "Serious"},
+    {"title": "Forrest Gump", "primary_genre": "Drama", "era": "1990s", "runtime_minutes": 142, "rating": "PG-13", "won_best_picture": true, "is_franchise": false, "setting": "Historical", "tone": "Uplifting"},
+    {"title": "Inception", "primary_genre": "Sci-Fi", "era": "2010s", "runtime_minutes": 148, "rating": "PG-13", "won_best_picture": false, "is_franchise": false, "setting": "Surreal", "tone": "Serious"},
+    {"title": "The Matrix", "primary_genre": "Sci-Fi", "era": "1990s", "runtime_minutes": 136, "rating": "R", "won_best_picture": false, "is_franchise": true, "setting": "Surreal", "tone": "Serious"},
+    {"title": "Goodfellas", "primary_genre": "Crime", "era": "1990s", "runtime_minutes": 146, "rating": "R", "won_best_picture": false, "is_franchise": false, "setting": "Urban", "tone": "Dark Humor"},
+    {"title": "The Silence of the Lambs", "primary_genre": "Thriller", "era": "1990s", "runtime_minutes": 118, "rating": "R", "won_best_picture": true, "is_franchise": true, "setting": "Urban", "tone": "Suspenseful"},
+    {"title": "Saving Private Ryan", "primary_genre": "War", "era": "1990s", "runtime_minutes": 169, "rating": "R", "won_best_picture": false, "is_franchise": false, "setting": "Historical", "tone": "Serious"},
+    {"title": "Interstellar", "primary_genre": "Sci-Fi", "era": "2010s", "runtime_minutes": 169, "rating": "PG-13", "won_best_picture": false, "is_franchise": false, "setting": "Space", "tone": "Serious"},
+    {"title": "Parasite", "primary_genre": "Thriller", "era": "2010s", "runtime_minutes": 132, "rating": "R", "won_best_picture": true, "is_franchise": false, "setting": "Urban", "tone": "Dark Humor"},
+    {"title": "The Lord of the Rings: The Return of the King", "primary_genre": "Fantasy", "era": "2000s", "runtime_minutes": 201, "rating": "PG-13", "won_best_picture": true, "is_franchise": true, "setting": "Fantasy World", "tone": "Epic"},
+    {"title": "Gladiator", "primary_genre": "Action", "era": "2000s", "runtime_minutes": 155, "rating": "R", "won_best_picture": true, "is_franchise": false, "setting": "Historical", "tone": "Serious"},
+    {"title": "The Departed", "primary_genre": "Crime", "era": "2000s", "runtime_minutes": 151, "rating": "R", "won_best_picture": true, "is_franchise": false, "setting": "Urban", "tone": "Suspenseful"},
+    {"title": "Whiplash", "primary_genre": "Drama", "era": "2010s", "runtime_minutes": 106, "rating": "R", "won_best_picture": false, "is_franchise": false, "setting": "Urban", "tone": "Intense"},
+    {"title": "The Grand Budapest Hotel", "primary_genre": "Comedy", "era": "2010s", "runtime_minutes": 99, "rating": "R", "won_best_picture": false, "is_franchise": false, "setting": "Historical", "tone": "Whimsical"},
+    {"title": "Casablanca", "primary_genre": "Drama", "era": "1940s", "runtime_minutes": 102, "rating": "PG", "won_best_picture": true, "is_franchise": false, "setting": "Historical", "tone": "Romantic"},
+    {"title": "Citizen Kane", "primary_genre": "Drama", "era": "1940s", "runtime_minutes": 119, "rating": "PG", "won_best_picture": false, "is_franchise": false, "setting": "Urban", "tone": "Serious"},
+    {"title": "2001: A Space Odyssey", "primary_genre": "Sci-Fi", "era": "1960s", "runtime_minutes": 149, "rating": "G", "won_best_picture": false, "is_franchise": false, "setting": "Space", "tone": "Philosophical"},
+    {"title": "Apocalypse Now", "primary_genre": "War", "era": "1970s", "runtime_minutes": 147, "rating": "R", "won_best_picture": false, "is_franchise": false, "setting": "Historical", "tone": "Intense"},
+    {"title": "Blade Runner", "primary_genre": "Sci-Fi", "era": "1980s", "runtime_minutes": 117, "rating": "R", "won_best_picture": false, "is_franchise": true, "setting": "Urban", "tone": "Philosophical"},
+    {"title": "The Princess Bride", "primary_genre": "Fantasy", "era": "1980s", "runtime_minutes": 98, "rating": "PG", "won_best_picture": false, "is_franchise": false, "setting": "Fantasy World", "tone": "Whimsical"},
+    {"title": "Jaws", "primary_genre": "Thriller", "era": "1970s", "runtime_minutes": 124, "rating": "PG", "won_best_picture": false, "is_franchise": true, "setting": "Coastal", "tone": "Suspenseful"},
+    {"title": "E.T. the Extra-Terrestrial", "primary_genre": "Sci-Fi", "era": "1980s", "runtime_minutes": 115, "rating": "PG", "won_best_picture": false, "is_franchise": false, "setting": "Suburban", "tone": "Heartwarming"},
+    {"title": "The Lion King", "primary_genre": "Animation", "era": "1990s", "runtime_minutes": 88, "rating": "G", "won_best_picture": false, "is_franchise": true, "setting": "Nature", "tone": "Uplifting"},
+    {"title": "Toy Story", "primary_genre": "Animation", "era": "1990s", "runtime_minutes": 81, "rating": "G", "won_best_picture": false, "is_franchise": true, "setting": "Suburban", "tone": "Heartwarming"},
+    {"title": "Spirited Away", "primary_genre": "Animation", "era": "2000s", "runtime_minutes": 125, "rating": "PG", "won_best_picture": false, "is_franchise": false, "setting": "Fantasy World", "tone": "Whimsical"},
+    {"title": "Mad Max: Fury Road", "primary_genre": "Action", "era": "2010s", "runtime_minutes": 120, "rating": "R", "won_best_picture": false, "is_franchise": true, "setting": "Post-Apocalyptic", "tone": "Intense"}
+  ],
+  "preprocessing": {
+    "feature_selection_entropy_threshold": 0.3,
+    "weight_calculation_method": "proportional"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "name": "World Countries Dataset",
+    "version": "1.0.0",
+    "description": "50 countries with geographic, demographic, and cultural characteristics"
+  },
+  "identification_fields": ["name"],
+  "feature_fields": [
+    {
+      "name": "continent",
+      "display_name": "Continent",
+      "type": "categorical"
+    },
+    {
+      "name": "population_millions",
+      "display_name": "Population",
+      "type": "numerical",
+      "bucketing": {
+        "method": "custom",
+        "buckets": [
+          {"label": "Small (<10M)", "min": 0, "max": 10},
+          {"label": "Medium (10-50M)", "min": 10, "max": 50},
+          {"label": "Large (50-100M)", "min": 50, "max": 100},
+          {"label": "Very Large (100M+)", "min": 100, "max": null}
+        ]
+      }
+    },
+    {
+      "name": "gdp_per_capita_thousands",
+      "display_name": "GDP per Capita",
+      "type": "numerical",
+      "bucketing": {
+        "method": "custom",
+        "buckets": [
+          {"label": "Low Income (<$10k)", "min": 0, "max": 10},
+          {"label": "Lower-Middle ($10-25k)", "min": 10, "max": 25},
+          {"label": "Upper-Middle ($25-50k)", "min": 25, "max": 50},
+          {"label": "High Income ($50k+)", "min": 50, "max": null}
+        ]
+      }
+    },
+    {
+      "name": "language_family",
+      "display_name": "Primary Language Family",
+      "type": "categorical"
+    },
+    {
+      "name": "government_type",
+      "display_name": "Government Type",
+      "type": "categorical"
+    },
+    {
+      "name": "is_coastal",
+      "display_name": "Has Coastline",
+      "type": "boolean"
+    },
+    {
+      "name": "climate_zone",
+      "display_name": "Primary Climate",
+      "type": "categorical"
+    },
+    {
+      "name": "has_red_in_flag",
+      "display_name": "Red in Flag",
+      "type": "boolean"
+    },
+    {
+      "name": "has_blue_in_flag",
+      "display_name": "Blue in Flag",
+      "type": "boolean"
+    },
+    {
+      "name": "num_neighbors",
+      "display_name": "Number of Land Neighbors",
+      "type": "numerical",
+      "bucketing": {
+        "method": "custom",
+        "buckets": [
+          {"label": "Island (0)", "min": 0, "max": 1},
+          {"label": "Few (1-3)", "min": 1, "max": 4},
+          {"label": "Several (4-8)", "min": 4, "max": 9},
+          {"label": "Many (9+)", "min": 9, "max": null}
+        ]
+      }
+    }
+  ],
+  "items": [
+    {"name": "United States", "continent": "North America", "population_millions": 331, "gdp_per_capita_thousands": 76, "language_family": "Germanic", "government_type": "Federal Republic", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 2},
+    {"name": "China", "continent": "Asia", "population_millions": 1412, "gdp_per_capita_thousands": 12, "language_family": "Sino-Tibetan", "government_type": "One-Party State", "is_coastal": true, "climate_zone": "Varied", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 14},
+    {"name": "India", "continent": "Asia", "population_millions": 1393, "gdp_per_capita_thousands": 2, "language_family": "Indo-European", "government_type": "Federal Republic", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": false, "has_blue_in_flag": false, "num_neighbors": 6},
+    {"name": "Brazil", "continent": "South America", "population_millions": 214, "gdp_per_capita_thousands": 9, "language_family": "Romance", "government_type": "Federal Republic", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": false, "has_blue_in_flag": true, "num_neighbors": 10},
+    {"name": "Russia", "continent": "Europe", "population_millions": 146, "gdp_per_capita_thousands": 12, "language_family": "Slavic", "government_type": "Federal Republic", "is_coastal": true, "climate_zone": "Arctic", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 14},
+    {"name": "Japan", "continent": "Asia", "population_millions": 125, "gdp_per_capita_thousands": 42, "language_family": "Japonic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 0},
+    {"name": "Germany", "continent": "Europe", "population_millions": 83, "gdp_per_capita_thousands": 51, "language_family": "Germanic", "government_type": "Federal Republic", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 9},
+    {"name": "United Kingdom", "continent": "Europe", "population_millions": 68, "gdp_per_capita_thousands": 47, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 1},
+    {"name": "France", "continent": "Europe", "population_millions": 67, "gdp_per_capita_thousands": 45, "language_family": "Romance", "government_type": "Semi-Presidential Republic", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 8},
+    {"name": "Italy", "continent": "Europe", "population_millions": 59, "gdp_per_capita_thousands": 36, "language_family": "Romance", "government_type": "Parliamentary Republic", "is_coastal": true, "climate_zone": "Mediterranean", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 6},
+    {"name": "South Korea", "continent": "Asia", "population_millions": 52, "gdp_per_capita_thousands": 35, "language_family": "Koreanic", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 1},
+    {"name": "Spain", "continent": "Europe", "population_millions": 47, "gdp_per_capita_thousands": 30, "language_family": "Romance", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Mediterranean", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 5},
+    {"name": "Canada", "continent": "North America", "population_millions": 38, "gdp_per_capita_thousands": 52, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Arctic", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 1},
+    {"name": "Australia", "continent": "Oceania", "population_millions": 26, "gdp_per_capita_thousands": 62, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Arid", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 0},
+    {"name": "Netherlands", "continent": "Europe", "population_millions": 17, "gdp_per_capita_thousands": 58, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 2},
+    {"name": "Saudi Arabia", "continent": "Asia", "population_millions": 35, "gdp_per_capita_thousands": 23, "language_family": "Semitic", "government_type": "Absolute Monarchy", "is_coastal": true, "climate_zone": "Arid", "has_red_in_flag": false, "has_blue_in_flag": false, "num_neighbors": 8},
+    {"name": "Switzerland", "continent": "Europe", "population_millions": 9, "gdp_per_capita_thousands": 93, "language_family": "Germanic", "government_type": "Federal Republic", "is_coastal": false, "climate_zone": "Alpine", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 5},
+    {"name": "Sweden", "continent": "Europe", "population_millions": 10, "gdp_per_capita_thousands": 61, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": false, "has_blue_in_flag": true, "num_neighbors": 2},
+    {"name": "Poland", "continent": "Europe", "population_millions": 38, "gdp_per_capita_thousands": 18, "language_family": "Slavic", "government_type": "Parliamentary Republic", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 7},
+    {"name": "Argentina", "continent": "South America", "population_millions": 46, "gdp_per_capita_thousands": 10, "language_family": "Romance", "government_type": "Federal Republic", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": false, "has_blue_in_flag": true, "num_neighbors": 5},
+    {"name": "South Africa", "continent": "Africa", "population_millions": 60, "gdp_per_capita_thousands": 6, "language_family": "Niger-Congo", "government_type": "Parliamentary Republic", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 6},
+    {"name": "Egypt", "continent": "Africa", "population_millions": 104, "gdp_per_capita_thousands": 4, "language_family": "Semitic", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Arid", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 4},
+    {"name": "Nigeria", "continent": "Africa", "population_millions": 211, "gdp_per_capita_thousands": 2, "language_family": "Niger-Congo", "government_type": "Federal Republic", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": false, "has_blue_in_flag": false, "num_neighbors": 4},
+    {"name": "Kenya", "continent": "Africa", "population_millions": 54, "gdp_per_capita_thousands": 2, "language_family": "Niger-Congo", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 5},
+    {"name": "Ethiopia", "continent": "Africa", "population_millions": 117, "gdp_per_capita_thousands": 1, "language_family": "Afro-Asiatic", "government_type": "Federal Republic", "is_coastal": false, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 6},
+    {"name": "Mexico", "continent": "North America", "population_millions": 130, "gdp_per_capita_thousands": 10, "language_family": "Romance", "government_type": "Federal Republic", "is_coastal": true, "climate_zone": "Varied", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 3},
+    {"name": "Turkey", "continent": "Asia", "population_millions": 85, "gdp_per_capita_thousands": 9, "language_family": "Turkic", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Mediterranean", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 8},
+    {"name": "Thailand", "continent": "Asia", "population_millions": 70, "gdp_per_capita_thousands": 7, "language_family": "Tai-Kadai", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 4},
+    {"name": "Vietnam", "continent": "Asia", "population_millions": 98, "gdp_per_capita_thousands": 4, "language_family": "Austroasiatic", "government_type": "One-Party State", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 3},
+    {"name": "Philippines", "continent": "Asia", "population_millions": 111, "gdp_per_capita_thousands": 3, "language_family": "Austronesian", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 0},
+    {"name": "Indonesia", "continent": "Asia", "population_millions": 274, "gdp_per_capita_thousands": 4, "language_family": "Austronesian", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 3},
+    {"name": "Malaysia", "continent": "Asia", "population_millions": 33, "gdp_per_capita_thousands": 11, "language_family": "Austronesian", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 3},
+    {"name": "Singapore", "continent": "Asia", "population_millions": 6, "gdp_per_capita_thousands": 72, "language_family": "Sino-Tibetan", "government_type": "Parliamentary Republic", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 1},
+    {"name": "New Zealand", "continent": "Oceania", "population_millions": 5, "gdp_per_capita_thousands": 48, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 0},
+    {"name": "Norway", "continent": "Europe", "population_millions": 5, "gdp_per_capita_thousands": 89, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Arctic", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 3},
+    {"name": "Denmark", "continent": "Europe", "population_millions": 6, "gdp_per_capita_thousands": 68, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 1},
+    {"name": "Finland", "continent": "Europe", "population_millions": 6, "gdp_per_capita_thousands": 53, "language_family": "Uralic", "government_type": "Parliamentary Republic", "is_coastal": true, "climate_zone": "Arctic", "has_red_in_flag": false, "has_blue_in_flag": true, "num_neighbors": 3},
+    {"name": "Ireland", "continent": "Europe", "population_millions": 5, "gdp_per_capita_thousands": 99, "language_family": "Celtic", "government_type": "Parliamentary Republic", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": false, "has_blue_in_flag": false, "num_neighbors": 1},
+    {"name": "Portugal", "continent": "Europe", "population_millions": 10, "gdp_per_capita_thousands": 24, "language_family": "Romance", "government_type": "Semi-Presidential Republic", "is_coastal": true, "climate_zone": "Mediterranean", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 1},
+    {"name": "Greece", "continent": "Europe", "population_millions": 11, "gdp_per_capita_thousands": 20, "language_family": "Hellenic", "government_type": "Parliamentary Republic", "is_coastal": true, "climate_zone": "Mediterranean", "has_red_in_flag": false, "has_blue_in_flag": true, "num_neighbors": 4},
+    {"name": "Czech Republic", "continent": "Europe", "population_millions": 11, "gdp_per_capita_thousands": 27, "language_family": "Slavic", "government_type": "Parliamentary Republic", "is_coastal": false, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 4},
+    {"name": "Hungary", "continent": "Europe", "population_millions": 10, "gdp_per_capita_thousands": 19, "language_family": "Uralic", "government_type": "Parliamentary Republic", "is_coastal": false, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 7},
+    {"name": "Austria", "continent": "Europe", "population_millions": 9, "gdp_per_capita_thousands": 54, "language_family": "Germanic", "government_type": "Federal Republic", "is_coastal": false, "climate_zone": "Alpine", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 8},
+    {"name": "Belgium", "continent": "Europe", "population_millions": 12, "gdp_per_capita_thousands": 51, "language_family": "Germanic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Temperate", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 4},
+    {"name": "Israel", "continent": "Asia", "population_millions": 9, "gdp_per_capita_thousands": 52, "language_family": "Semitic", "government_type": "Parliamentary Republic", "is_coastal": true, "climate_zone": "Mediterranean", "has_red_in_flag": false, "has_blue_in_flag": true, "num_neighbors": 5},
+    {"name": "UAE", "continent": "Asia", "population_millions": 10, "gdp_per_capita_thousands": 44, "language_family": "Semitic", "government_type": "Federal Monarchy", "is_coastal": true, "climate_zone": "Arid", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 2},
+    {"name": "Chile", "continent": "South America", "population_millions": 19, "gdp_per_capita_thousands": 15, "language_family": "Romance", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Varied", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 3},
+    {"name": "Colombia", "continent": "South America", "population_millions": 51, "gdp_per_capita_thousands": 6, "language_family": "Romance", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Tropical", "has_red_in_flag": true, "has_blue_in_flag": true, "num_neighbors": 5},
+    {"name": "Peru", "continent": "South America", "population_millions": 33, "gdp_per_capita_thousands": 7, "language_family": "Romance", "government_type": "Presidential Republic", "is_coastal": true, "climate_zone": "Varied", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 5},
+    {"name": "Morocco", "continent": "Africa", "population_millions": 37, "gdp_per_capita_thousands": 3, "language_family": "Semitic", "government_type": "Constitutional Monarchy", "is_coastal": true, "climate_zone": "Arid", "has_red_in_flag": true, "has_blue_in_flag": false, "num_neighbors": 3}
+  ],
+  "preprocessing": {
+    "feature_selection_entropy_threshold": 0.3,
+    "weight_calculation_method": "proportional"
+  }
+}
