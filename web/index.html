@@ -1,112 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feature Sleuth - Educational Guessing Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>🔍 Feature Sleuth</h1>
-            <p class="subtitle">Data-driven deduction game</p>
-        </header>
-
-        <div class="game-setup" id="gameSetup">
-            <h2>Select a Dataset</h2>
-            <div class="dataset-selector">
-                <button class="dataset-btn" data-dataset="animals">🦁 Animals</button>
-                <button class="dataset-btn" data-dataset="countries">🌍 Countries</button>
-                <button class="dataset-btn" data-dataset="fruits">🍎 Fruits</button>
-                <button class="dataset-btn" data-dataset="planets">🪐 Planets</button>
-                <button class="dataset-btn" data-dataset="programming">💻 Programming Languages</button>
-            </div>
-        </div>
-
-        <div class="game-board hidden" id="gameBoard">
-            <div class="game-info">
-                <div class="info-card">
-                    <h3 id="gameName">Game Name</h3>
-                    <p id="gameDescription">Dataset description</p>
-                </div>
-                <div class="stats">
-                    <div class="stat">
-                        <span class="stat-label">Turns:</span>
-                        <span class="stat-value" id="turnsUsed">0</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-label">Items Remaining:</span>
-                        <span class="stat-value" id="itemsRemaining">0</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-label">Score:</span>
-                        <span class="stat-value" id="currentScore">0</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="game-area">
-                <div class="turn-section">
-                    <h3>Select a Feature</h3>
-                    <div id="featureButtons" class="feature-buttons"></div>
-                    <button id="autoSelectBtn" class="btn btn-secondary">Auto-Select (Best Entropy)</button>
-                </div>
-
-                <div class="selection-result hidden" id="selectionResult">
-                    <h3>🎲 Random Selection</h3>
-                    <div class="result-card">
-                        <p class="selected-feature">Feature: <strong id="selectedFeature"></strong></p>
-                        <p class="selected-value">Value: <strong id="selectedValue"></strong></p>
-                    </div>
-                </div>
-
-                <div class="items-section">
-                    <h3>Remaining Items</h3>
-                    <div id="itemsList" class="items-list"></div>
-                </div>
-
-                <div class="guess-section">
-                    <h3>Make Your Guess</h3>
-                    <div id="guessOptions" class="guess-options"></div>
-                    <button id="submitGuessBtn" class="btn btn-primary hidden">Submit Guess</button>
-                </div>
-            </div>
-
-            <div class="action-buttons">
-                <button id="newGameBtn" class="btn btn-secondary">New Game</button>
-            </div>
-        </div>
-
-        <div class="game-over hidden" id="gameOver">
-            <div class="result-modal">
-                <h2>🎉 Game Complete!</h2>
-                <div class="final-stats">
-                    <div class="final-stat">
-                        <span class="label">Total Points:</span>
-                        <span class="value" id="finalPoints">0</span>
-                    </div>
-                    <div class="final-stat">
-                        <span class="label">Turns Used:</span>
-                        <span class="value" id="finalTurns">0</span>
-                    </div>
-                    <div class="final-stat">
-                        <span class="label">Efficiency:</span>
-                        <span class="value" id="finalEfficiency">0%</span>
-                    </div>
-                </div>
-                <div id="correctGuesses" class="correct-guesses"></div>
-                <div id="suggestions" class="suggestions"></div>
-                <button id="playAgainBtn" class="btn btn-primary">Play Again</button>
-            </div>
-        </div>
-
-        <div class="turn-history" id="turnHistory">
-            <h3>Turn History</h3>
-            <div id="historyList" class="history-list"></div>
-        </div>
-    </div>
-
-    <script type="module" src="game.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

@@ -46,7 +46,26 @@ npm install
 npm run build
 ```
 
-## 🚀 Quick Start
+## 🎮 Web Application
+
+A fully-featured React web app is included in the `web/` directory!
+
+**Play the game in your browser with:**
+- Animated spinning wheel selector
+- Beautiful, responsive UI
+- Post-game analysis dashboard
+- 6 built-in datasets ready to play
+
+```bash
+cd web
+npm install
+npm run dev
+# Visit http://localhost:5173
+```
+
+See [web/README.md](web/README.md) for more details.
+
+## 🚀 Quick Start (Engine API)
 
 ### 1. Define Your Dataset
 
@@ -469,18 +488,31 @@ See [`examples/configs/data/`](examples/configs/data/) for complete examples.
 - ✅ Full TypeScript implementation
 - ✅ Complete test suite (52+ tests)
 
+### Implemented Features ✅
+
+#### Core Game Engine (✅ Complete)
+- ✅ Pure functional game logic
+- ✅ Configuration-driven architecture
+- ✅ Multiple game modes
+- ✅ Data processing (bucketing, grouping, weights)
+- ✅ Entropy-based feature selection
+- ✅ Flexible scoring system
+- ✅ Comprehensive validation
+- ✅ Full TypeScript implementation
+- ✅ Complete test suite (52+ tests)
+
+#### Frontend Components (✅ Complete - in `web/`)
+- ✅ React UI components
+- ✅ Visual spinning wheel selector with animations
+- ✅ Zustand state management
+- ✅ Progress tracking UI
+- ✅ Post-game analysis dashboard
+- ✅ Responsive mobile-first design
+- ✅ Beautiful gradient theme
+
 ### Not Yet Implemented 🚧
 
-The original design document described a **full-stack web application**. This package implements the **core game engine only**. The following components are **not included** in this package:
-
-#### Frontend Components (Not Implemented)
-- ❌ React/Vue UI components
-- ❌ Visual random selectors (spinning wheel, dice, card draw animations)
-- ❌ State management integration (Redux/Zustand)
-- ❌ Progress tracking UI
-- ❌ Post-game analysis dashboard
-- ❌ Theme system and animations
-- ❌ Mobile-responsive layouts
+The original design document described a **full-stack web application**. The following backend and advanced features are **not yet implemented**:
 
 #### Backend Features (Not Implemented)
 - ❌ User accounts and authentication

@@ -1,0 +1,38 @@
+.spinning-wheel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: fit-content;
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: #e74c3c;
+  z-index: 10;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.spinning-wheel {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .spinning-wheel {
+    width: 90vw;
+    height: 90vw;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .wheel-pointer {
+    font-size: 2rem;
+  }
+}
